@@ -7,7 +7,7 @@
 
 __Enter here: http://j.mp/TimeUKCodeComp__
 
-It is a sample [Echo.js](http://toddmotto.com/echo-js-simple-javascript-image-lazy-loading/) based lazy load plugin for WordPress with some failing tests, see if you can fix them and send us a PR to win a Raspberry Pi 3.
+It is a sample [Echo.js](http://toddmotto.com/echo-js-simple-javascript-image-lazy-loading/) based lazy load plugin for WordPress with some failing tests, see if you can fix them and send us a PR to win a Raspberry Pi 3 or 6 months Spotify subscription. Don't worry if you can't get them all passing, just send us your best effort.
 
 It is built using the WordPress coding standards, is designed to be very lite weight on system resources.
 
@@ -15,9 +15,19 @@ Good Luck!!!
 
 ### How to run the tests
 
-You should be able to run the tests using a few simple steps, if you need a hand here is a quick guide:
+You should be able to run the tests using a few simple steps, if you need a hand here is a quick guide to running the tests:
 
-#### DigitalOcean
+1. Ensure you have all the dependencies, at a minimum you will need:
+ * git
+ * subversion
+ * phpunit
+ * php5
+ * mysql server
+1. Checkout the code from github
+1. Setup the tests be executing `./tests/bin/install-wp-tests.sh timeinc-wp-coding-challenge root MYSQLPASSWORD localhost 4.4.2` repalcing MYSQLPASSWORD with your root password or just type `''` if you don't have one
+1. Run the tests by executing `phpunit`
+
+#### Running on a new DigitalOcean Droplet
 
 This guide is based on using the 14.04.4 Digital Ocean image, use the $5 size and any location to create it. This droplet is only intended for the coding challenge, always remember to set a password for the MySQL root user!
 
