@@ -71,7 +71,7 @@ class Echo_Js_Lazy_Load {
 		'the_content',
 		'get_the_excerpt',
 		'widget_text',
-		'post_thumbnail_text',
+		'post_thumbnail_html',
 		'get_avatar',
 		'get_comment_excerpt',
 		'get_comment_text',
@@ -174,7 +174,7 @@ class Echo_Js_Lazy_Load {
 		}
 
 		$content = preg_replace_callback(
-			'/<img[^>]+>/',
+			'/<img[^>]+>/i',
 			array( $this, 'change_img_markup' ),
 			$content
 		);
